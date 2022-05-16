@@ -43,3 +43,4 @@ Thumbs.db
 
 # Key files
 environment.ts
+**/api
