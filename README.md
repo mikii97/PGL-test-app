@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Setting up the project
+
+To properly setting up the project:
+1. Open \src\environments\environment_example.ts file 
+2. Provide your own x-api-key value into environment->headers:
+    {
+        name: 'x-api-key',
+        value: '<**your_x-api-key_value_here**>'
+    }
+3. Save the file.
+4. Change file name from "environment_example.ts" to "environment.ts".

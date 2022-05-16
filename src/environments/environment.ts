@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: [
+    {
+      name: 'generalAPI',
+      url: 'https://api.lot.com/hr/v3/offers/list/pl'
+    }
+  ],
+  headers: [
+    {
+      name: 'x-api-key',
+      value: ''
+    }
+  ]
 };
 
 /*
