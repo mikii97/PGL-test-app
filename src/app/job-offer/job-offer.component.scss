@@ -2,3 +2,41 @@ mat-panel-description {
     display: flex;
     justify-content: flex-end;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 2% 1% 4%;
+
+    .row {
+        display: flex;
+        margin-bottom: 1%;
+
+        .element {
+            display: flex;
+            flex: 3;
+            margin-bottom: 1%;
+
+            h3 {
+                margin: 0;
+            }
+
+            .value {
+                align-self: center;
+                margin-left: 20px;
+                font-size: 15px;
+            }
+
+            .location {
+                margin-top: 1px;
+            }
+        }
+
+    }
+
+    .second-info {
+        align-self: end;
+        opacity: 50%;
+        margin: 0;
+    }
+}

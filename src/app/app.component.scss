@@ -1,0 +1,13 @@
+@import "../global-colors.scss";
+
+.view {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: $backgroundColor;
+
+    .offers {
+        margin: 2% 0;
+    }
+
+}

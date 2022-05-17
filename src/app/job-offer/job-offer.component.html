@@ -5,13 +5,62 @@
                 {{jobOfferData.title}}
             </mat-panel-title>
             <mat-panel-description>
-                <mat-chip-list><mat-chip *ngFor="let singleCategory of jobOfferData.category">{{singleCategory}}</mat-chip></mat-chip-list>
+                <mat-chip-list>
+                    <mat-chip *ngFor="let singleCategory of jobOfferData.category">{{singleCategory}}</mat-chip>
+                </mat-chip-list>
             </mat-panel-description>
             <button mat-icon-button>
                 <mat-icon *ngIf="!panelOpenState">keyboard_arrow_down</mat-icon>
                 <mat-icon *ngIf="panelOpenState">keyboard_arrow_up</mat-icon>
             </button>
         </mat-expansion-panel-header>
-        <p>This is the primary content of the panel.</p>
+        <div class="container">
+            <!-- Date -->
+            <div class="row second-info" *ngIf="jobOfferData.date">
+                {{jobOfferData.date}}
+            </div>
+
+            <!-- Url -->
+            <div class="row" *ngIf="jobOfferData.url">
+                <div class="element">
+                    <h3>Url: </h3>
+                    <div class="value">
+                        <a href="{{jobOfferData.url}}">{{jobOfferData.url}}</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Place -->
+            <div class="row">
+                <!-- Location -->
+                <div class="element" *ngIf="jobOfferData.location">
+                    <h3>Location: </h3>
+                    <div class="value location">{{jobOfferData.location}}</div>
+                </div>
+                <div class="element" *ngIf="!jobOfferData.location"></div>
+
+                <!-- Country -->
+                <div class="element" *ngIf="jobOfferData.country">
+                    <h3>Country: </h3>
+                    <div class="value location">{{jobOfferData.country}}</div>
+                </div>
+                <div class="element" *ngIf="!jobOfferData.country"></div>
+
+                <!-- Region -->
+                <div class="element" *ngIf="jobOfferData.region">
+                    <h3>Region: </h3>
+                    <div class="value location">{{jobOfferData.region}}</div>
+                </div>
+                <div class="element" *ngIf="!jobOfferData.region"></div>
+
+                <!-- Spacer -->
+                <div class="element"></div>
+            </div>
+
+            <!-- Reference -->
+            <div class="row second-info" *ngIf="jobOfferData.reference">
+                <p>{{jobOfferData.reference}}</p>
+            </div>
+        </div>
     </mat-expansion-panel>
 </mat-accordion>
