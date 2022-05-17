@@ -1,16 +1,5 @@
-<!-- <div *ngFor="let offer of offers">
-    <h3 *ngFor="let job of offer.jobs">{{job.title}}</h3>
-</div> -->
-
 <div class="view">
-    <div class="offers">
-        <app-job-offer [jobOfferData]="offers[0].jobs[0]"></app-job-offer>
-        <app-job-offer [jobOfferData]="offers[0].jobs[1]"></app-job-offer>
-        <app-job-offer [jobOfferData]="offers[0].jobs[2]"></app-job-offer>
-        <app-job-offer [jobOfferData]="offers[0].jobs[3]"></app-job-offer>
-        <app-job-offer [jobOfferData]="offers[0].jobs[4]"></app-job-offer>
-        <app-job-offer [jobOfferData]="offers[0].jobs[5]"></app-job-offer>
-        <app-job-offer [jobOfferData]="offers[0].jobs[6]"></app-job-offer>
-        <app-job-offer [jobOfferData]="offers[0].jobs[7]"></app-job-offer>
+    <div class="offers" *ngFor="let offer of offers">
+        <app-job-offer *ngFor="let job of offer.jobs" [jobOfferData]="job"></app-job-offer>
     </div>
 </div>

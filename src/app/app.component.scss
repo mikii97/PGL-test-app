@@ -8,6 +8,8 @@
 
     .offers {
         margin: 2% 0;
+        overflow: scroll;    
+        overflow-x: hidden;    
     }
 
 }
