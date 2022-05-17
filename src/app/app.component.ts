@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JobOfferService } from './services/job-offer.service';
+import { OFFERS, OffersInterface } from './api/mock-api';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,10 @@ import { JobOfferService } from './services/job-offer.service';
 })
 export class AppComponent implements OnInit {
   title = 'PGL-test-app';
+  offers: OffersInterface[];
 
   constructor(private jobOfferService: JobOfferService) {
+    this.offers = OFFERS;
   }
 
   ngOnInit(): void {
@@ -17,6 +20,6 @@ export class AppComponent implements OnInit {
   }
 
   getData() {
-    this.jobOfferService.getDataFromLocalApi();
+    //this.jobOfferService.getData(); 
   }
 }
