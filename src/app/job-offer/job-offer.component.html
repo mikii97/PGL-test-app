@@ -6,7 +6,7 @@
             </mat-panel-title>
             <mat-panel-description>
                 <mat-chip-list>
-                    <mat-chip *ngFor="let singleCategory of jobOfferData.category">{{singleCategory}}</mat-chip>
+                    <mat-chip disabled *ngFor="let singleCategory of jobOfferData.category">{{singleCategory}}</mat-chip>
                 </mat-chip-list>
             </mat-panel-description>
             <button mat-icon-button>
@@ -16,9 +16,9 @@
         </mat-expansion-panel-header>
         <div class="container">
             <!-- Date -->
-            <div class="row second-info" *ngIf="jobOfferData.date">
+            <!-- <div class="row second-info" *ngIf="jobOfferData.date">
                 {{jobOfferData.date}}
-            </div>
+            </div> -->
 
             <!-- Url -->
             <div class="row" *ngIf="jobOfferData.url">
@@ -58,8 +58,13 @@
             </div>
 
             <!-- Reference -->
-            <div class="row second-info" *ngIf="jobOfferData.reference">
+            <div class="row second-info" *ngIf="jobOfferData.date || jobOfferData.reference">
+                <div class="element"></div>
                 <p>{{jobOfferData.reference}}</p>
+                <div class="date">
+                    <mat-icon>calendar_today</mat-icon>
+                    <p>{{jobOfferData.date}}</p>
+                </div>
             </div>
         </div>
     </mat-expansion-panel>

@@ -1,12 +1,26 @@
+@import "../../global-colors.scss";
+
+mat-panel-title {
+    font-size: 16px;
+}
+
 mat-panel-description {
     display: flex;
     justify-content: flex-end;
+
+    .mat-chip.mat-standard-chip {
+        opacity: 60%;
+    }
+}
+
+mat-icon {
+    opacity: 40%;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    padding: 1% 2% 1% 4%;
+    padding: 1% 6% 1% 4%;
 
     .row {
         display: flex;
@@ -14,7 +28,7 @@ mat-panel-description {
 
         .element {
             display: flex;
-            flex: 3;
+            flex: 5;
             margin-bottom: 1%;
 
             h3 {
@@ -25,6 +39,14 @@ mat-panel-description {
                 align-self: center;
                 margin-left: 20px;
                 font-size: 15px;
+
+                a:link {
+                    color: $urlColor;
+                }
+
+                a:visited {
+                    color: $urlVisitedColor;
+                }
             }
 
             .location {
@@ -35,8 +57,28 @@ mat-panel-description {
     }
 
     .second-info {
-        align-self: end;
-        opacity: 50%;
-        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        opacity: 60%;
+
+        div {
+            display: flex;
+            justify-content: flex-start
+        }
+
+        .date {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            mat-icon {
+                margin: auto 5%;
+                transform: scale(0.8);
+            }
+        }
+
+        p {
+            margin: auto 0;
+        }
     }
 }

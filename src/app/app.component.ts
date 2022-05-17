@@ -9,7 +9,7 @@ import { OffersInterface } from './interfaces';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'PGL-test-app';
+  title = 'Job Offers';
   offers: OffersInterface[];
 
   constructor(private jobOfferService: JobOfferService) {

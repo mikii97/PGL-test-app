@@ -1,13 +1,51 @@
 @import "../global-colors.scss";
 
-.view {
+.general-view {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: $backgroundColor;
 
-    .offers {
-        margin: 2% 0;
+    .center-view {
+        margin: 2% 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .spacer {
+            flex: 1;
+        }
+
+        div {
+            flex: 1;
+
+            h1 {
+                margin-bottom: 0;
+            }
+
+            hr {
+                margin-top: 0;
+            }
+        }
+
+        mat-card {
+            flex: 10;
+            overflow: scroll;
+            overflow-x: hidden;
+            padding: 35px;
+
+            scrollbar-width: thin;
+
+            *::-webkit-scrollbar {
+                width: 12px;
+              }
+
+              app-job-offer {
+                  margin: 1px;
+              }
+        }
     }
+
+
 
 }
