@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobOfferService } from './services/job-offer.service';
-import { OFFERS, OffersInterface } from './api/mock-api';
+import { OFFERS } from './api/mock-api';
+import { OffersInterface } from './interfaces';
 
 @Component({
   selector: 'app-root',
