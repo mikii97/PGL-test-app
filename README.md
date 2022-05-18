@@ -29,7 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Setting up the project
 
 To properly setting up the project:
-1. Open \src\environments\environment_example.ts file 
+
+### Set up real API or...
+1. Open \src\environments\environment_example.ts file. 
 2. Provide your own x-api-key value into environment->headers:
     {
         name: 'x-api-key',
@@ -37,3 +39,9 @@ To properly setting up the project:
     }
 3. Save the file.
 4. Change file name from "environment_example.ts" to "environment.ts".
+
+### Set up mocked API
+1. Open src\app\api\mock-api-example.ts file.
+2. Provide proper API response.
+3. Save the file.
+4. Change file name from "mock-api-example.ts" to "mock-api.ts".
