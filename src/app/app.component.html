@@ -2,7 +2,13 @@
     <div class="center-view">
         <div class="spacer"></div>
         <div>
-            <h1>{{title}}</h1>
+            <div>
+                <h1>{{title}}</h1>
+                <button mat-icon-button>
+                    <mat-icon *ngIf="isDark" (click)="switchTheme()">wb_sunny</mat-icon>
+                    <mat-icon *ngIf="!isDark" (click)="switchTheme()">brightness_2</mat-icon>
+                </button>
+            </div>
             <hr>
         </div>
         <mat-card>
