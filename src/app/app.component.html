@@ -1,5 +1,21 @@
-<div class="view">
-    <div class="offers" *ngFor="let offer of offers">
-        <app-job-offer *ngFor="let job of offer.jobs" [jobOfferData]="job"></app-job-offer>
+<div class="general-view">
+    <div class="center-view">
+        <div class="spacer"></div>
+        <div>
+            <div>
+                <h1>{{title}}</h1>
+                <button mat-icon-button>
+                    <mat-icon *ngIf="isDark" (click)="switchTheme()">wb_sunny</mat-icon>
+                    <mat-icon *ngIf="!isDark" (click)="switchTheme()">brightness_2</mat-icon>
+                </button>
+            </div>
+            <hr>
+        </div>
+        <mat-card>
+            <div class="offers" *ngFor="let offer of offers">
+                <app-job-offer *ngFor="let job of offer.jobs" [jobOfferData]="job"></app-job-offer>
+            </div>
+        </mat-card>
+        <div class="spacer"></div>
     </div>
 </div>
